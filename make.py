@@ -53,7 +53,7 @@ def make_code(des_path, fun_num, class_name, target_name):
     out2.write('static '+class_name+' *mode'+class_name+' = nil;\n')
     out2.write('+ ('+class_name+' *)share'+class_name+' {\n')
     out2.write('\tif (!mode'+class_name+') {\n')
-    out2.write('\t\t[mode'+class_name+' = [['+class_name+' alloc] init];\n')
+    out2.write('\t\tmode'+class_name+' = [['+class_name+' alloc] init];\n')
 
     out3 = open(new_class_m_path3, 'w')
     print_format_m(new_class_m_path, new_class_m_path2, new_class_m_path3, out2, out3, class_name, 0, fun_num)
